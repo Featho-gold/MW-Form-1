@@ -65,22 +65,19 @@
     </div>
   </main>
 
-  <script>
+ <script>
   document.getElementById("enquiry-form").addEventListener("submit", function () {
     const region = document.getElementById("region").value;
     const turbine = document.getElementById("turbine").value;
     const resultField = document.getElementById("result");
     const subjectField = document.getElementById("subject");
-    const messageField = document.getElementById("message");
 
     if (region === "north-hill" && turbine === "04") {
       resultField.value = "correct";
       subjectField.value = "Maddison Windfarm Enquiry Submission - CORRECT";
-      messageField.value = "[RESULT: CORRECT]\n\n" + messageField.value;
     } else {
       resultField.value = "incorrect";
       subjectField.value = "Maddison Windfarm Enquiry Submission - INCORRECT";
-      messageField.value = "[RESULT: INCORRECT]\n\n" + messageField.value;
     }
   });
 </script>
