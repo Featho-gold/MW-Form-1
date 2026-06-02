@@ -1,59 +1,40 @@
 body {
   margin: 0;
-  background: #d8d2c4;
+  background: #efe9dc;
   color: #111;
   font-family: "Times New Roman", Times, serif;
 }
 
-.page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 48px 16px;
+.iframe-body {
+  overflow: hidden;
 }
 
-.form-shell {
-  width: min(680px, 100%);
-  background: #efe9dc;
-  border: 1px solid #8f8878;
-  padding: 28px 30px;
-  box-shadow: 0 0 0 1px #c7c0b1 inset;
+.iframe-page {
+  padding: 0;
 }
 
-h1 {
-  margin: 0 0 10px 0;
-  font-size: 32px;
-  font-weight: bold;
-  letter-spacing: 0.2px;
-}
-
-.intro,
-.footnote {
-  font-size: 16px;
-  line-height: 1.45;
-  margin: 0 0 18px 0;
-}
-
-form {
+.embedded-form {
   display: grid;
   gap: 10px;
+  padding: 0;
 }
 
 label {
   font-size: 15px;
   font-weight: bold;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 input,
 select,
+textarea,
 button {
   font: inherit;
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 9px 10px;
@@ -62,14 +43,20 @@ select {
   color: #111;
 }
 
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
   outline: 1px solid #333;
   outline-offset: 1px;
 }
 
 button {
-  margin-top: 16px;
+  margin-top: 14px;
   padding: 10px 14px;
   border: 1px solid #3d3a35;
   background: #d7d0c2;
